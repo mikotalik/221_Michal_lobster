@@ -10,24 +10,137 @@
             overflow: hidden;
             margin: 0px;
         }
+
+        #intro {
+            width: 100vw;
+            position: relative;
+            left:20vw;
+        }
+
+        #atu {
+            width: 24vw;
+            margin-top: -3vw;
+            margin-left: -2.5vw;
+        }
+
+        h1,
+        h2,
+        p {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 1.7vw;
+        }
+
+        h1 {
+            font-size: 4vw;
+            margin-top: -10%;
+        }
+
+        h2 {
+            color: #7ABACC;
+            font-size: 1.3vw;
+            margin-top: 2%;
+        }
+
+        p {
+            color: #7ABACC;
+            font-size: 0.7vw;
+            line-height: 1vw;
+        }
+
+        #banner {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 40vw;
+            height: 100vh;
+            background-color: #005B5E;
+
+            border-left: 3vw;
+        }
+
+        #button-container{
+            margin-top: 3vw;
+            font-size: 0px;
+            padding-left: 10%;
+            border-top: 0.5px solid white;
+            border-bottom: 1px solid white;
+        }
+        #button-container-bottom{
+            font-size: 0px;
+            padding-left: 45%;
+            border-top: 0.5px solid white;
+            border-bottom: 1px solid white;
+        }
+
+        button{
+            font-size: 1.4vw;
+            width: calc(35vw*0.2);
+            height:calc(35vw*0.2);
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            border-top: none;
+            border-bottom: none;
+            background-color: #ff791e;
+            color: white;
+        }
+
+        button:hover{
+            border:0px;
+            background-color: white;
+            color: #ff791e;
+        }
+
+        #button-transparent{
+            background-color: transparent;
+        }
+
+        #button-transparent:hover{
+            background-color: white;
+            color:#005B5E
+        }
+
     </style>
-
-    <!-- Import maps polyfill -->
-    <script async src="https://unpkg.com/es-module-shims@1.6.2/dist/es-module-shims.js"></script>
-
-    <!--  Map  -->
-    <script type="importmap">
-            {
-                "imports": {
-                    "three": "./build/three.module.js",
-                    "three/addons/": "./jsm/"
-                }
-            }
-        </script>
 </head>
 
 <body>
-    <script type="module" src="main.js"></script>
+    <video id="intro" muted autoplay loop>
+        <source
+            src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5CIntro%5CLanding%20Page_OPT.mp4"
+            type="video/mp4" />
+    </video>
+
+    <div id="banner">
+        <img id="atu"
+            src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CATU%20Logos%5CPNG%5CATU-Logo-Full-RGB-Teal.png" />
+        <h1 id="title">Catch your lobster and eat it</h1>
+        <h2 id="subtitle">
+            Welcome to the ‘Catch your lobster and eat it’ virtual experience.
+        </h2>
+        <p>
+            Using this tool, you have the opportunity to learn about the fishery in Ireland
+            for European lobster, the biology and sustainability of lobster, and the culinary
+            options available for making the most of caught lobster. The experience is very
+            interactive and as you move through you will need to select various options,
+            answer questions, and activate information points.
+            <br>
+            <br>
+            We hope you enjoy learning more about lobster!
+        </p>
+        <div id="button-container">
+            <button id="button-orange" onclick="location.href='experience.html'">fishing</button>
+            <button id="button-orange" onclick="">science</button>
+            <button id="button-orange" onclick="">culinary</button>
+        </div>
+        <div id="button-container-bottom">
+            <button id="button-transparent" onclick="location.href='credits.html'">credits</button>
+            <button id="button-transparent" onclick="window.close()">quit</button>
+        </div>
+    </div>
+
 </body>
 
 </html>

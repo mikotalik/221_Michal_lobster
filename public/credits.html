@@ -11,50 +11,16 @@
             margin: 0px;
         }
 
-        img {
-            display: block;
-            position: absolute;
-        }
-
-        #outro {
+        #intro {
             width: 100vw;
             position: relative;
-        }
-
-        #making-of {
-            width: 19vw;
-            position: absolute;
-            top: 17vh;
-            left: 78vw;
-            rotate: 2deg;
-        }
-
-        #making-of:hover{
-            scale: 110%;
+            left: 20vw;
         }
 
         #atu {
-            width: 50vw;
-            top: 12vh;
-            left: 27vw;
-        }
-
-        #hea {
-            width: 20vw;
-            top: 91vh;
-            left: 63vw;
-        }
-
-        #satle {
-            width: 10vw;
-            top: 91vh;
-            left: 23vw;
-        }
-
-        #tl {
-            width: 15vw;
-            top: 91vh;
-            left: 6vw;
+            width: 24vw;
+            margin-top: -3vw;
+            margin-left: -2.5vw;
         }
 
         h1,
@@ -62,121 +28,136 @@
         p {
             color: white;
             font-family: Arial, Helvetica, sans-serif;
-            display: block;
-            position: absolute;
-            font-weight: 600;
+            font-weight: 100;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 1.7vw;
         }
 
         h1 {
-            font-size: 1.5vw;
+            font-size: 4vw;
+            margin-top: -10%;
         }
 
         h2 {
-            font-size: 1vw;
+            color: #7ABACC;
+            font-size: 1.3vw;
+            margin-top: 2%;
         }
 
         p {
+            color: #7ABACC;
             font-size: 0.7vw;
-            line-height: 1.3vw;
+            line-height: 1vw;
         }
 
-        #making-of-text{
-            top: 77vh;
-            left: 83vw;
-            rotate: 2deg;
+        #banner {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 40vw;
+            height: 100vh;
+            background-color: #005B5E;
+
+            border-left: 3vw;
         }
 
-        #credits {
-            left: 8vw;
-            top: 12vh;
+        #button-container {
+            font-size: 0px;
+            padding-left: 10%;
+            height: calc(35vw*0.2);
+            border-top: 0.5px solid white;
+            border-bottom: 1px solid white;
         }
 
-        #companies {
-            left: 5vw;
-            top: 20vh;
+        #button-container-bottom {
+            font-size: 0px;
+            padding-left: 45%;
+            border-top: 0.5px solid white;
+            border-bottom: 1px solid white;
         }
 
-        #companies-list {
-            left: 5vw;
-            top: 24vh;
+        button {
+            font-size: 1.4vw;
+            width: calc(35vw*0.2);
+            height: calc(35vw*0.2);
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            border-top: none;
+            border-bottom: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: #ff791e;
+            color: white;
+        }
+
+        button:hover {
+            border: 0px;
+            background-color: white;
+            color: #ff791e;
+        }
+
+        #button-orange {
+            position: absolute;
 
         }
 
-        #people {
-            left: 5vw;
-            top: 54vh;
+        #button-transparent {
+            background-color: transparent;
         }
 
-        #people-list {
-            left: 5vw;
-            top: 58vh;
-
+        #button-transparent:hover {
+            background-color: white;
+            color: #005B5E
         }
     </style>
 </head>
 
 <body>
-    <video id="outro" muted autoplay loop>
+    <video id="intro" muted autoplay loop>
         <source
-            src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5CCredits%5CCredits_OPT.mp4"
+            src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5CIntro%5CLanding%20Page_OPT.mp4"
             type="video/mp4" />
     </video>
 
-    <video id="making-of" muted autoplay loop>
-        <source
-            src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5CThe%20Making%20of%20Catch%20your%20Lobster%20and%20Eat%20it%5C1%20-%20The%20Making%20Of.mp4"
-            type="video/mp4" />
-    </video>
-
-    <img id="atu"
-        src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CATU%20Logos%5CPNG%5CATU-Logo-Full-RGB-Navy.png" />
-    <img id="hea"
-        src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CHEA%20Logo.jpg" />
-    <img id="satle"
-        src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CSATLE%20Logo.png" />
-    <img id="tl"
-        src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CT-and-L-National-Forum-1.jpg" />
-
-    <h1 id="making-of-text">
-        Making of
-    </h1>
-
-    <h1 id="credits">
-        Credits
-    </h1>
-
-    <h2 id="companies">
-        Companies and institutions
-    </h2>
-
-    <p id="companies-list">
-        • Cyan Planet<br>
-        • Teaching and Learning Office ATU<br>
-        • School of Science and Computing, ATU<br>
-        • Galway International Hotel School, ATU<br>
-        • Galway Bay Boat Tours<br>
-        • Galway Bay Seafoods<br>
-        • SATLE initiative<br>
-        • National Forum for Teaching & Learning<br>
-        • Higher Education Authority
-    </p>
-
-    <h2 id="people">
-        People
-    </h2>
-
-    <p id="people-list">
-        • Katie O’Dwyer - Project Lead<br>
-        • Ulrich Hoeche - Project Lead<br>
-        • Ian O’Connor - Project Support<br>
-        • Davy Roche - Filming<br>
-        • Ciarán Oliver - Skipper and Lobster Fisher<br>
-        • Collette Furey – Skipper and Lobster Fisher<br>
-        • Ivan Marcos - Audio Visual Advisor<br>
-        • Molly Curran – Deckhand, Applied Freshwater and Marine Biology Student<br>
-        • Joseph Donnelly – Deckhand, Applied Freshwater and Marine Biology Student<br>
-        • Enda McDuffie – Deckhand, Applied Freshwater and Marine Biology Student
-    </p>
+    <div id="banner">
+        <img id="atu"
+            src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CATU%20Logos%5CPNG%5CATU-Logo-Full-RGB-Teal.png" />
+        <h1 id="title">Credits</h1>
+        <h2 id="subtitle">
+            Companies and Instituions
+        </h2>
+        <p>
+            Cyan Planet<br>
+            Teaching and Learning Office ATU<br>
+            School of Science and Computing, ATU<br>
+            Galway International Hotel School, ATU<br>
+            Galway Bay Boat Tours<br>
+            Galway Bay Seafoods<br>
+            SATLE initiative<br>
+            National Forum for Teaching & Learning<br>
+            Higher Education Authority
+        </p>
+        <h2 id="subtitle">
+            People
+        </h2>
+        <p>
+            Katie O’Dwyer - Project Lead<br>
+            Ulrich Hoeche - Project Lead<br>
+            Ian O’Connor - Project Support<br>
+            Davy Roche - Filming<br>
+            Ciarán Oliver - Skipper and Lobster Fisher<br>
+            Collette Furey – Skipper and Lobster Fisher<br>
+            Ivan Marcos - Audio Visual Advisor<br>
+            Molly Curran – Deckhand, Applied Freshwater and Marine Biology Student<br>
+            Joseph Donnelly – Deckhand, Applied Freshwater and Marine Biology Student<br>
+            Enda McDuffie – Deckhand, Applied Freshwater and Marine Biology Student<br>
+        </p>
+        <div id="button-container">
+            <button id="button-transparent" onclick="location.href='index.html'">back</button>
+            <button id="button-orange" onclick="">The Making Of</button>
+        </div>
+    </div>
 
 </body>
 

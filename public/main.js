@@ -169,6 +169,9 @@ function onMouseUp(event) {
                 animateAnything(object, "translateZ", 65,0, [0], [-0.1])
                 animateAnything(object, "translateZ", 65,75, [0], [0.1])
                 object.pressed = true
+
+                //animateAnything(document, "title", 1000, 0, [0], [100])
+                //animateAnything(console, "log", 1000, 0, [0], [1])
             }
 
         }
