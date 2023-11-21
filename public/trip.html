@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lobster Experience</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Import maps polyfill -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.2/dist/es-module-shims.js"></script>
+
+    <!--  Map  -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        div {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            color: white;
+        }
+
+        h2 {
+            font-size: 28px;
+            width: 580px;
+            height: 67px;
+            margin: 0px;
+            border: 1px solid white;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+        }
+
+        .h2-long{
+            width:1010px;
+        }
+
+        h3 {
+            color: #001a79;
+            font-size: 18px;
+            width: 393px;
+            height: 67.5px;
+            border: 0.5px solid white;
+            margin: 0px;
+            background-color: #7bb9cb;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding-left: 35px;
+        }
+
+        .h3-active{
+            background-color: transparent;
+            color: white;
+            height: 65px;
+        }
+
+        button {
+            font-size: 18px;
+            width: 215px;
+            height: 67.5px;
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
+            padding-left: 35px;
+        }
+
+        button:hover {
+            background-color: #7bb9cb;
+        }
+
+        video {
+            width: 480px;
+            margin-left: 50px;
+            margin-bottom: -3px;
+        }
+
+        .video-placeholder{
+            width: 480px;
+            height:270px;
+            margin-left: 50px;
+        }
+
+        .section{
+            display: flex;
+            width: 1060px;
+            height: 610px;
+            border: 1px solid white;
+        }
+
+        .left-holder {
+            width: 480px;
+        }
+
+        .card {
+            margin-left: 50px;
+            font-size: 18px;
+            color: #001a79;
+            width: 380px;
+            height: 170px;
+            border: none;
+            background: linear-gradient(315deg, #001a79 50px, #7bb9cb 51px);
+            padding: 50px;
+        }
+
+        .quiz {
+            margin-left: 150px;
+            width: 480px;
+            height: 610px;
+            font-size: 0;
+            align-items: start;
+            
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div id="section-preparation" class="section">
+        <div id="video-preparation" class="left-holder">
+            <video
+                src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C1%20-%20BoatTrip%5CPreparationSettingPots_OPT.mp4"
+                controls>
+            </video>
+            <h2 id="title-preparation">
+                Preparation & setting pots
+            </h2>
+            <div id="card-preparation" class="card" onclick="this.style.background= 'linear-gradient(315deg, #001a79 50px, #ff791e 51px)';this.innerText = 'To catch lobsters'">
+                What is this fishing <br> equipment used for?
+            </div>
+        </div>
+
+        <div class="quiz" id="quiz-preparation">
+            <h3 id="quiz-title">Select all equipment needed</h3>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">fishing line</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">lobster pots</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">otter boards</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">winch</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">fishing net</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">storage boxes</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">v-notch knife</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">gaff</button>
+            <button class="button-half" onclick="this.style.backgroundColor='#7bb9cb'">rubber bands</button>
+        </div>
+        
+    </div>
+
+    <div id="section-sustainability" class="section">
+        <div id="video-preparation" class="left-holder">
+            <div class="video-placeholder"></div>
+            <h2 class="h2-long" id="title-preparation">
+                Lobster Sustainability
+            </h2>
+            <video
+                src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C1%20-%20BoatTrip%5CPreparationSettingPots_OPT.mp4"
+                controls>
+            </video>
+        </div>
+
+        <div class="quiz" id="quiz-preparation">
+            <h3 id="quiz-title">From where to where must the lobster be <br> measured to assess the minimum landing size? </h3>
+            <h3 class="h3-active" id="quiz-title">Rostrum tip to tail tip</h3>
+            <h3 class="h3-active" id="quiz-title">Eye socket to tail tip</h3>
+            <h3 class="h3-active" id="quiz-title">Rostrum to carapace tip</h3>
+        </div>
+        
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+
+</html>
