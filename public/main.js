@@ -102,6 +102,10 @@ function onMouseUp(event) {
     
 }
 
+function onMouseScroll(event) {
+    camera.setFocalLength(camera.getFocalLength() - (event.deltaY / 100))
+}
+
 function onFingerMove(event) {
     if (event.touches.length == 1 && !doubletouch) {
         pmouse.x = mouse.x
@@ -167,14 +171,20 @@ function enableGyro() {
     }
 }
 
+function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+  }
+
 window.addEventListener("resize", onWindowResize)
 window.addEventListener('mousemove', onMouseMove);
 window.addEventListener("mousedown", onMouseDown)
 window.addEventListener("mouseup", onMouseUp)
+window.addEventListener("wheel", onMouseScroll)
 window.addEventListener("touchmove", onFingerMove)
 window.addEventListener("touchstart", onFingerDown)
 window.addEventListener("touchend", onFingerUp)
-if (window.DeviceMotionEvent) {
+if (isMobile() && window.DeviceMotionEvent) {
     document.getElementById("gyrobutton").addEventListener("click", enableGyro)
     window.addEventListener("deviceorientation", gyroRotate, false)
 }

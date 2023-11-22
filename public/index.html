@@ -18,7 +18,7 @@
         }
 
         #atu {
-            width: 24vw;
+            width: 20vw;
             margin-top: -3vw;
             margin-left: -2.5vw;
         }
@@ -106,7 +106,23 @@
     </style>
 </head>
 
-<body>
+<script>
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
+    }
+
+    function setupForMobile() {
+        if (isMobile()) {
+            document.getElementById("banner").style.width = '60vw'
+            document.getElementById("title").style.marginTop = '-7%'
+            document.getElementById("intro").style.left = '31vw'
+            document.getElementById("intro").style.top = '-20vh'
+        }
+    }
+</script>
+
+<body onload="setupForMobile();">
     <video id="intro" muted autoplay loop>
         <source
             src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5CIntro%5CLanding%20Page_OPT.mp4"
@@ -116,7 +132,7 @@
     <div id="banner">
         <img id="atu"
             src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C4%20-%20GraphicDesign%5CImagesForUseInExperience%5CLogos%5CATU%20Logos%5CPNG%5CATU-Logo-Full-RGB-Teal.png" />
-        <h1 id="title">Catch your lobster and eat it</h1>
+        <h1 id="title" style="font-size: 5vh;">Catch your lobster and eat it</h1>
         <h2 id="subtitle">
             Welcome to the ‘Catch your lobster and eat it’ virtual experience.
         </h2>

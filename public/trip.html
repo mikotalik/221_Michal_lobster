@@ -94,8 +94,20 @@
         }
 
         .button-tick {
-            width: 90px;
+            padding-left: 30px;
+            width: 72px;
             height: 62px;
+        }
+
+        .button-side {
+            padding-left: 0px;
+            width: 3vw;
+            max-width: 3vw;
+            min-width: 48px;
+            height: 3vw;
+            max-height: 5%;
+            min-height: 48px;
+            text-align: center;
         }
 
         video {
@@ -115,6 +127,7 @@
             width: 1060px;
             height: 610px;
             border: 1px solid white;
+            z-index: 100;
         }
 
         .left-holder {
@@ -138,12 +151,18 @@
             height: 610px;
             font-size: 0;
             align-items: start;
-            
         }
 
         .cell {
             white-space: nowrap;
             size: 90%;
+        }
+
+        img {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
         }
     </style>
 
@@ -155,13 +174,14 @@
     <script>
         function SwitchColor(Obj, NewColor)
         {
-            if (Obj.style.backgroundColor == 'rgb(123, 185, 203)' || Obj.style.backgroundColor == '#7bb9cb')
+            console.log(Obj.style.backgroundColor)
+            if (Obj.style.backgroundColor == NewColor)
             {
-                Obj.style.backgroundColor=NewColor;
+                Obj.style.backgroundColor='transparent';
             }
             else
             {
-                Obj.style.backgroundColor='#7bb9cb';
+                Obj.style.backgroundColor=NewColor;
             }
         }
     </script>
@@ -189,16 +209,20 @@
 
         <div class="quiz" id="quiz-preparation">
             <h3 id="quiz-title">Select all equipment needed</h3>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">fishing line</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">lobster pots</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">otter boards</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">winch</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">fishing net</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">storage boxes</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">v-notch knife</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">gaff</button>
-            <button class="button-half" onclick="SwitchColor(this, 'transparent')">rubber bands</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">fishing line</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">lobster pots</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">otter boards</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">winch</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">fishing net</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">storage boxes</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">v-notch knife</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">gaff</button>
+            <button class="button-half" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">rubber bands</button>
         </div>
+
+        <button class="button-tick" onclick="SwitchColor(this, 'rgb(255, 121, 30)')" style="position: absolute; right: 431px; bottom: -64px;">&#10003;</button>
+
+        <img src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C1%20-%20BoatTrip%5CBoatTripBackgroundNet.png" width="460" height="203" style="margin-left: -459px; margin-top: 406px; z-index: 0; border: 1px solid white; width: 448px;">
         
     </div>
 
@@ -218,26 +242,30 @@
             
         </div>
         <div class="quiz" id="quiz-preparation">
-            <table style="border: none; border-radius: 0; border-spacing: 0px; position: relative; left: -94px; white-space: nowrap;">
+            <table style="border: none; border-radius: 0; border-spacing: 0px; position: relative; left: -78px; top: 340px; white-space: nowrap;">
                 <tr>
                     <td id="cell"></td>
                     <td id="cell"><h3 id="quiz-title">From where to where must the lobster be <br> measured to assess the minimum landing size? </h3></td>
                 </tr>
                 <tr>
-                    <td id="cell"><button id="testtext" class="button-tick" onclick="SwitchColor(this, 'transparent')">A</button></td>
+                    <td id="cell"><button id="testtext" class="button-tick" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">A</button></td>
                     <td id="cell"><h3 class="h3-active-table" id="quiz-title">Rostrum tip to tail tip</h3></td>
                 </tr>
                 <tr>
-                    <td id="cell"><button class="button-tick" onclick="SwitchColor(this, 'transparent')">B</button></td>
+                    <td id="cell"><button class="button-tick" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">B</button></td>
                     <td id="cell"><h3 class="h3-active-table" id="quiz-title">Eye socket to tail tip</h3></td>
                 </tr>
                 <tr>
-                    <td id="cell"><button class="button-tick" onclick="SwitchColor(this, 'transparent')">C</button></td>
+                    <td id="cell"><button class="button-tick" onclick="SwitchColor(this, 'rgb(123, 185, 203)')">C</button></td>
                     <td id="cell"><h3 class="h3-active-table" id="quiz-title">Rostrum to carapace tip</h3></td>
+                </tr>
+                <tr>
+                    <td id="cell" style="padding-top: 8px;"><button class="button-tick" onclick="SwitchColor(this, 'rgb(255, 121, 30)')">&#10003;</button></td>
                 </tr>
             </table>
         </div>
-        
+        <img src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C1%20-%20BoatTrip%5CBoatTripBackgroundTopFade.png" width="640" height="427" style="margin-left: -530px; margin-top: -157px; z-index: -1;">
+        <img src="LobsterImmersiveExperienceDevelopment%5CFinalLobsterImmersiveExperience%5C1%20-%20BoatTrip%5CBoatTripBackgroundNet.png" width="460" height="338" style="margin-left: -555px; z-index: 0;">
     </div>
 
     <div id="section-catching" class="section">
@@ -246,7 +274,8 @@
     </div>
 
     <div style="position: absolute; bottom: 5px; left: 5px; z-index: 100;">
-        <button class="button-tick" id="gyrobutton" onclick="SwitchColor(this, 'transparent')" style="padding-left: 24px;">Gyro</button>
+        <button class="button-side" id="gyrobutton" onclick="SwitchColor(this, 'transparent')">Gyro</button>
+        <button class="button-side" onclick="SwitchColor(this, 'rgb(123, 185, 203)'); location.href='index.html'">&#60;</button>
     </div>
 
     <script type="module" src="main.js"></script>
